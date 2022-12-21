@@ -2,7 +2,7 @@
 Uno de los factores más cruciales para tener un código base seguro es un proceso de desarrollo sólido: "mas vale prevenir que curar." Este documento proporciona un proceso de desarrollo de *ejemplo* que hemos encontrado que funciona bien.
 Además de mejorar la calidad general de código, este proceso sirve como complemento de nuestra [lista de verificación de preparación para auditorías](#). Si sigues el proceso acontinuación, naturalmente deberías marcar la mayoría de los elementos de verificación.
 
-``
+```
 Feature Request
  |
  └> Specification
@@ -16,7 +16,7 @@ Feature Request
               └> Deployment
                  |
                  └> Monitoring
-``
+```
 ## Especificación
 
 Toma nota de los tipos de variables que afectan a las características:
