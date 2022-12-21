@@ -2,7 +2,7 @@
 Este repositorio es una colección de guías y listas de verificación prácticas centradas en la seguridad para el desarrollo de contratos inteligentes, reunidas por el equipo de Nascent para compartirlo con miembros de la comunidad que puedan encontrarlo útil. No pretende ser exhaustivo; se inclina hacia recomendaciones prácticas y de opinión que consideramos apropiadas particularmente para los equipos que desarrollan y administran las primeras versiones de un protocolo.
 
 ## Contenido
-#### 1. Proceso de desarrollo
+#### 1. [Proceso de desarrollo](proceso-de-desarrollo.md)
 
 Uno de los factores más cruciales para tener un código base seguro es un proceso de desarrollo sólido: "mas vale prevenir que curar." Este documento brinda un proceso de desarrollo de ejemplo que nosotros, en Nascent, hemos encontrado que funciona bien. Recorre los pasos desde el diseño inicial y las solicitudes de características -> especificación -> evaluación -> implementación -> prueba -> implementación -> monitoreo.
 
