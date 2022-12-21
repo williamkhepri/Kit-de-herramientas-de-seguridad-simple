@@ -71,5 +71,31 @@ unchecked {
  10. Volver al paso 4 si se encuentran errores.
  11. Documentación de limpieza
  12. Configurar IC
- 13. Revisión de relaciónes públicas
-   - 
+ 13. Revisión de PR
+   - El implementador es solo la primera línea de defensa. Si eres un revisor, confirma qe el implementador siguió los principios anteriormente descritos (prueba por transición de estado, prueba por reversión, prueba de fuzz y prueba de integración)
+   - Revisa la documentación y asgúrate de que la implementación coincida con el comportamiento documentado. Si no es así, comuníquese con el implementador y confirme cuál debe actualizarse.
+   - Asegúrate de que CI pase
+   - Comprueba pasos en falso comunes ([reentrada, patrones de interacciones de efectos de comprobación, etc.](https://docs.soliditylang.org/en/v0.8.13/security-considerations.html#pitfalls)
+
+## Despliegue
+ 14. Escriba un script de implementación
+   - Escribir el script de implementación
+   - Lo más probable es que Foundry tenga listas las secuencias de comandos cuando esté leyendo esto. Echa un vistaszo a este [PR](https://github.com/foundry-rs/foundry/pull/1208)
+ 15. Escribe una prueba de implementación
+   - Asegúrate de que la implementación se realice exactamente según lo planeado escribiendo una prueba que testée *cada transición de estado* y asegúrate de que no ocurran cambios inesperados. Una forma de lograr esto es el código de trucos `record`. Si realizas una actualización a un protocolo existente, crea una lista de las direcciones de todo su protocolo, registra las llamadas y realiza una actualización. Luego, llama a `accesos` para cada dirección de tu protocolo. Asegúrate de que no haya ranuras/direcciones que hayan cambiado inesperadamente.
+ 16. Ten una auditoría realizada
+  - Considera si esta característica/contrato necesita una auditoría. Inclínate siempre hacia estar seguro en vez de lamentar después.
+  - Haz que la complejidad y el tamaño del código informen si se debe y quién debe auditar sus contratos.
+  - En Nascent puedes encontrar una lista interna de niveles de calidad de los auditores. Debes consultar con otros desarrolladores sobre quiénes son buenos auditores y quiénes no. Algunos auditores solo están allí para marcar una casilla para un protocolo, otros realmente se preocupan por encontrar vulnerabilidades.
+ 17. Implementa las correcciones de auditoría
+ 18. Servicio de monitoreo de configuración
+  - Ten una herramienta interna que monitorice aspectos importantes de tu sistema.
+  - Usa herramientas como [Check the chain](https://github.com/fei-protocol/checkthechain) + [Grafana](https://grafana.com/), o usa una herramienta de monitoreo estándar como [Tenderly](https://tenderly.co/alerting) o [Defender Sentinels](https://www.openzeppelin.com/defender) de Open Zepelin.
+ 19. Prepara/actualiza tu [Plan de respuesta a incidentes](incident-response-plan-template.md)
+ 20. Implementar los contratos
+  - Felicidades, probablemente acabas de aplastar al 99% de los desarrolladores de Solidity en términos de un desarrollo + implementación segura.
+
+## Monitoring
+21. Supervisar las próximas dos horas
+ - Usa el servicio de monitoreo que configuraste para observar atentamente comportamientos inesperados y estar listo para tomar medidas.
+22. Relájate, tómate una birra, te lo has ganado. :D
