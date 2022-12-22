@@ -10,7 +10,7 @@ Uno de los factores más cruciales para tener un código base seguro es un proce
 
 Las auditorías son costosas, requieren mucho tiempo y deben programarse con meses de anticipación. Completar esta lista de verificación ayuda a garantizar que una base de código esté lista para una revisión externa y ayuda a capturar la mayor cantidad de fruta posible. Esto permitirá a los auditores concentrar su tiempo y atención en indentificar vulnerabilidades más profundas y críticas.
 
-#### 3. Lista de verificación de seguridad previa al lanzamiento
+#### 3. [Lista de verificación de seguridad previa al lanzamiento](lista-de-verificación-de-seguridad-previa-al-lanzamiento.md)
 
 Antesde la implementación del código en la red principal, los equipos deben completar esta lista de verificación para asegurarse de que han tomado las medidas necesarias para habilitar la notificación y respuesta a posibles errores o incidentes de seguridad.
 
