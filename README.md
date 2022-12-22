@@ -14,7 +14,7 @@ Las auditorías son costosas, requieren mucho tiempo y deben programarse con mes
 
 Antesde la implementación del código en la red principal, los equipos deben completar esta lista de verificación para asegurarse de que han tomado las medidas necesarias para habilitar la notificación y respuesta a posibles errores o incidentes de seguridad.
 
-#### 4. Plantilla de plan de respuesta a incidentes.
+#### 4. [Plantilla de plan de respuesta a incidentes](plantilla-de-plan-de-respuestas-a-incidentes.md)
 
 Ningún proyecto espera tener un incidente de seguridad. Tener un plan documentado con anticipación puede ayudar a un equipo a responder con rapidez y calma en el calor del momento cuando la adrenalina está alta.
 
